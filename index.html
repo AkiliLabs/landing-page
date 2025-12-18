@@ -1,81 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akili Labs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">AKILI LABS</div>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Primary favicon (ico) and PNG fallback for browsers that prefer it -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="msapplication-TileImage" content="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Hero Section -->
-    <main class="hero">
-        <div class="hero-content">
-            <div class="hero-content-container">
-                <div class="hero-text-container">
-                    <h1 class="hero-title">Akili Labs</h1>
-                    <p class="hero-description"><span class="typing-text">where code dreams in colour...</span></p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Scroll indicator -->
-        <div class="scroll-indicator">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down">
-                <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-        </div>
-    </main>
+    <title>Akili Labs — Software studio driven by purpose and creativity</title>
+    <meta name="description" content="Akili Labs is a purpose-driven software studio (founded 2025). We build meaningful digital products across AI, education and spirituality — designed to empower everyday users." />
+    <meta name="keywords" content="Akili Labs, software studio, AI, education, spirituality, Kenyan-Asian, startup, apps" />
+    <meta name="author" content="Akili Labs" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://akililabs.org/" />
 
-    <!-- Products Section -->
-    <section id="products" class="products-section">
-        <div class="container">
-            <h2 class="section-title">Our Tech Products</h2>
-            
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="img/asmaulhusna_icon.png" alt="Asma Ul Husna icon" />
-                    </div>
-                    <h3 class="product-title">Asma Ul Husna - Esmaül Hüsna</h3>
-                    <p class="product-description">App that enables users to explore the 99 Names of Allah through detailed meanings, Quranic references, and authentic audio recitations, with support for multiple languages.</p>
-                    <a href="https://asmaulhusna.xyz/" class="product-link green" target="_blank" rel="noopener noreferrer">Learn more</a> 
-                </div>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Akili Labs — Purpose-driven software studio" />
+    <meta property="og:description" content="We build thoughtful digital products across AI, education, and spirituality to empower everyday users." />
+    <meta property="og:image" content="/logo.png" />
+    <meta property="og:url" content="https://akililabs.org/" />
 
-                <div class="product-card">
-                    <div class="product-image purple-gradient">
-                        <span class="product-emoji">🔒</span>
-                    </div>
-                    <h3 class="product-title">More coming soon...</h3>
-                    <p class="product-description">Check here soon for upcoming products</p>
-                    <!-- <a href="#" class="product-link green">Learn more</a> -->
-                </div>
-            </div>
-        </div>
-    </section> 
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Akili Labs — Purpose-driven software studio" />
+    <meta name="twitter:description" content="We build thoughtful digital products across AI, education, and spirituality to empower everyday users." />
+    <meta name="twitter:image" content="/logo.png" />
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Akili Labs</h2>
-            
-            <div class="about-content">
-                <p>Founded in early 2025 by two brothers with Kenyan-Asian roots, <em>Akili Labs</em> is a software studio driven by purpose and creativity. <em>“Akili”</em>—Swahili for <em>mind</em> or <em>intelligence</em>—reflects our vision: to build thoughtful, impactful tools for the modern world.</p>
-                <p>We craft digital products across diverse niches, including AI, education, and spirituality, always with the goal of empowering the everyday consumer. At Akili Labs, we believe technology should be both meaningful and accessible.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Icons & manifest (update with real assets later if you add a web app manifest and touch icons) -->
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> Akili Labs</p>
-        </div>
-    </footer>    <script src="js/main.js"></script>
-</body>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Akili Labs",
+      "url": "https://akililabs.org/",
+      "logo": "https://akililabs.org/logo.png",
+      "foundingDate": "2025",
+      "description": "Akili Labs is a purpose-driven software studio building thoughtful products across AI, education and spirituality.",
+      "sameAs": []
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
