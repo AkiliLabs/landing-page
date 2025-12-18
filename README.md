@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# Akili Labs — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is the landing page for **Akili Labs** (https://akililabs.org). It uses Vite + React + TypeScript and Tailwind CSS. The page includes a full-screen animated background (powered by `unicornstudio-react`) and a simple UI overlay with company name, buttons and modals.
 
-Currently, two official plugins are available:
+## Quick overview
+- Project root: repository root
+- Source: `src/`
+- Main entry: `src/main.tsx`
+- Demo page: `src/demo.tsx`
+- UI components: `src/components/ui/` (the `rainbow-matrix-shader.tsx` component lives here)
+- Assets: `src/assets/` and `public/`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requirements
+- Node.js (16+ recommended)
+- npm or pnpm
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Install
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Run (dev)
+```bash
+npm run dev
 ```
+
+## Build
+```bash
+npm run build
+```
+
+## Preview production build
+```bash
+npm run preview
+```
+
+## Key files to edit
+- `index.html` — site `<head>`: SEO, Open Graph, Twitter cards, JSON-LD. I updated this to use `https://akililabs.org/`.
+- `src/demo.tsx` — top-level UI overlay (company title, slogan, logo position, buttons, modals).
+- `src/components/ui/rainbow-matrix-shader.tsx` — Unicorn background component.
+- `src/index.css` — global styles and Tailwind imports; font and layout tweaks live here.
+
+## SEO & Social images
+- Current `index.html` uses `/logo.png` for favicon and OG image. For best results add a dedicated social preview at `/og-image.png` sized 1200×630. Update the `og:image` and `twitter:image` meta tags in `index.html` when ready.
+
+## Adding a web manifest & icons
+- `index.html` references `/site.webmanifest`. Create a `public/site.webmanifest` with your app manifest and add icon files in `public/` (48×48, 72×72, 120×120, 180×180, 512×512).
+
+## Where to change the domain
+- `index.html` canonical, `og:url`, and JSON-LD `url`/`logo` point to `https://akililabs.org/`. Update if your production domain differs.
+
+## UI notes
+- Logo: `src/assets/logo.png` (used as favicon and top-left logo in the page).
+- Project example: Projects modal displays `asmaulhusna_icon.png` from `src/assets/`.
+
+## Future improvements (suggested)
+- Add `/og-image.png` (1200×630) for richer link previews.
+- Add `site.webmanifest` and appropriate icons for progressive web app support.
+- Add sitemap.xml and robots.txt for SEO.
+- Consider server-side rendering (Next.js) if you need expanded SEO or dynamic pages.
+
+## Contact
+- For edits to content or assets, update the files above and open a PR.
+
