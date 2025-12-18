@@ -41,9 +41,14 @@ export default function DemoOne() {
       <div className="relative z-10 flex flex-col items-start justify-end h-full pointer-events-none pb-16 pl-8 md:pb-24 md:pl-16">
         <div className="pointer-events-auto text-left space-y-8">
           {/* Company Name */}
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-white select-none">
-            akili labs
-          </h1>
+          <div>
+            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-white select-none mb-2">
+              akili labs
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-md">
+              Software studio driven by purpose and creativity.
+            </p>
+          </div>
 
           {/* Buttons */}
           <div className="flex flex-row gap-4 justify-start items-center">
@@ -69,12 +74,33 @@ export default function DemoOne() {
         onClose={() => setActiveModal(null)}
         title="About Akili Labs"
       >
-        <p className="mb-4">
-          Founded in early 2025 by two brothers with Kenyan-Asian roots, Akili Labs is a software studio driven by purpose and creativity. “Akili”—Swahili for mind or intelligence—reflects our vision: to build thoughtful, impactful tools for the modern world.
-        </p>
-        <p>
-          We craft digital products across diverse niches, including AI, education, and spirituality, always with the goal of empowering the everyday consumer. At Akili Labs, we believe technology should be both meaningful and accessible.
-        </p>
+        <div className="space-y-6">
+          <p>
+            Founded in early 2025 by two brothers with Kenyan-Asian roots, Akili Labs is a software studio driven by purpose and creativity.
+          </p>
+
+          <div className="bg-white/5 p-4 rounded-lg border border-white/10">
+            <h3 className="text-white font-semibold mb-1">The Meaning of "Akili"</h3>
+            <p className="text-sm text-gray-400">
+              Swahili for <span className="text-white italic">mind</span> or <span className="text-white italic">intelligence</span>. It reflects our vision to build thoughtful, impactful tools for the modern world.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-3">Our Focus</h3>
+            <ul className="grid grid-cols-3 gap-3">
+              {["AI", "Education", "Spirituality"].map((item) => (
+                <li key={item} className="bg-white/5 py-2 px-1 rounded border border-white/5 text-center text-sm text-gray-300">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <p className="text-sm text-gray-400 border-l-2 border-white/20 pl-4 italic">
+            "We believe technology should be both meaningful and accessible."
+          </p>
+        </div>
       </Modal>
 
       <Modal
@@ -90,6 +116,10 @@ export default function DemoOne() {
               App that enables users to explore the 99 Names of Allah through detailed meanings, Quranic references, and authentic audio recitations, with support for multiple languages.
             </p>
           </div>
+        </div>
+        
+        <div className="mt-8 pt-6 border-t border-white/10 text-center">
+          <p className="text-sm text-gray-500 italic">More projects coming soon...</p>
         </div>
       </Modal>
     </div>
