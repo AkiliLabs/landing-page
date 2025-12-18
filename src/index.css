@@ -7,6 +7,11 @@
   --color-destructive-foreground: var(--destructive-foreground);
 }
 
+body {
+  overflow: hidden;
+  touch-action: none;
+}
+
 :root {
   --background: oklch(0 0 0);
   --foreground: oklch(1 0 0);
@@ -41,7 +46,7 @@
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(1 0 0 / 0.2);
   --sidebar-ring: oklch(1 0 0 / 0.3);
-  --font-geist-sans: "Geist Sans", sans-serif;
+  --font-geist-sans: "Inter", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
 }
 
