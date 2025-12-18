@@ -26,41 +26,41 @@ export default function DemoOne() {
   const [activeModal, setActiveModal] = useState<"about" | "projects" | null>(null);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black text-white font-sans">
+    <div className="relative w-full h-[100dvh] overflow-hidden bg-black text-white font-sans">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Component />
       </div>
 
       {/* Logo */}
-      <div className="absolute top-8 left-8 z-20 pointer-events-auto">
-        <img src="/logo.png" alt="Akili Labs Logo" className="w-12 h-12 object-contain brightness-0 invert" />
+      <div className="absolute top-6 left-6 md:top-8 md:left-8 z-20 pointer-events-auto">
+        <img src="/logo.png" alt="Akili Labs Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain brightness-0 invert" />
       </div>
 
       {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col items-start justify-end h-full pointer-events-none pb-16 pl-8 md:pb-24 md:pl-16">
-        <div className="pointer-events-auto text-left space-y-8">
+      <div className="relative z-10 flex flex-col items-start justify-end h-full pointer-events-none pb-12 pl-6 md:pb-24 md:pl-16">
+        <div className="pointer-events-auto text-left space-y-6 md:space-y-8">
           {/* Company Name */}
           <div>
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-white select-none mb-2">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-white select-none mb-2">
               akili labs
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-md">
+            <p className="text-base md:text-xl text-gray-300 font-light tracking-wide max-w-md">
               Software studio driven by purpose and creativity.
             </p>
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-row gap-4 justify-start items-center">
+          <div className="flex flex-row gap-3 md:gap-4 justify-start items-center">
             <button
               onClick={() => setActiveModal("about")}
-              className="px-8 py-3 bg-white text-black hover:bg-white/90 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 text-sm font-medium tracking-wide cursor-pointer"
+              className="px-6 py-2 md:px-8 md:py-3 bg-white text-black hover:bg-white/90 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 text-sm font-medium tracking-wide cursor-pointer"
             >
               About
             </button>
             <button
               onClick={() => setActiveModal("projects")}
-              className="px-8 py-3 bg-white text-black hover:bg-white/90 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 text-sm font-medium tracking-wide cursor-pointer"
+              className="px-6 py-2 md:px-8 md:py-3 bg-white text-black hover:bg-white/90 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 text-sm font-medium tracking-wide cursor-pointer"
             >
               Projects
             </button>
